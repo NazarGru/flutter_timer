@@ -178,7 +178,7 @@ class _HomeAppState extends State<HomeApp> {
                       margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 0),
                       child: IconButton(
                       onPressed: (){
-                        addLaps();
+                        (started) ?addLaps(): '';
                       }, 
                       icon: Icon(Icons.flag, color: Colors.white,)
                       ),
