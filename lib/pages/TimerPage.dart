@@ -15,7 +15,10 @@ class _TimerPageState extends State<TimerPage> {
   Widget build(BuildContext context) {
       return Scaffold(
         drawer: NavBar(),
-        appBar: AppBarMy('Таймер'),
+        appBar: AppBarMy(
+          backgroundColor: Colors.red,
+          title: 'Timer',
+        ),
         body: TimerApp(),
     );
   }

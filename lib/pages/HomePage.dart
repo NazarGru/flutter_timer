@@ -14,7 +14,10 @@ class _HomePageState extends State<HomePage> {
     Widget build(BuildContext context) {
       return Scaffold(
         drawer: NavBar(),
-        appBar: AppBarMy('Головна сторінка'),
+        appBar: AppBarMy(
+          backgroundColor: Colors.green,
+          title: 'Home',
+        ),
         body: Container(
           child: Text("HomePage"),
         ),
