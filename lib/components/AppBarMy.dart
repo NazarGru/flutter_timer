@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../theme/ThemeManeger.dart';
-ThemeManager _themeManager = ThemeManager();
+
 
 class AppBarMy extends StatefulWidget implements
 PreferredSizeWidget {
@@ -17,37 +16,24 @@ PreferredSizeWidget {
 
   @override
   State<AppBarMy> createState() => _AppBarMyState();
-
 }
-
 class _AppBarMyState extends State<AppBarMy> {
-  @override
-  void dispose() {
-    _themeManager.removeListener(themeListener);
-    super.dispose();
-  }
-
-  @override
-  void initState() {
-    _themeManager.addListener(themeListener);
-    super.initState();
-  }
-  themeListener(){
-    if(mounted){
-      setState(() {
-        
-      });
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      // flexibleSpace: Container(
+      //   decoration: BoxDecoration(
+      //     gradient: LinearGradient(
+      //     colors: [Color(0xff0c82df), Color(0xff064170)],
+      //     begin: Alignment.topLeft,
+      //     end: Alignment.bottomRight,
+      //   )
+      //   ),
+      // ),
       backgroundColor: widget.backgroundColor,
       title: Text(widget.title),
-       actions: [Switch(value: _themeManager.themeMode == ThemeMode.dark, onChanged: (newValue){
-       _themeManager.togleTheme(newValue);
-     })],
+    
     );
   }
 }
