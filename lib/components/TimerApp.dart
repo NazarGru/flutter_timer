@@ -75,7 +75,7 @@ class _TimerAppState extends State<TimerApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 4, 30, 117),
+      backgroundColor: Theme.of(context).primaryColor.withOpacity(0.10),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -86,11 +86,10 @@ class _TimerAppState extends State<TimerApp> {
               Center(
                 child: Text(
                   'Таймер',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 28.0,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: Theme.of(context)
+                  .textTheme
+                  .headline2!
+                  .copyWith(fontWeight: FontWeight.bold),
                   ),
               ),
               SizedBox(
@@ -98,11 +97,10 @@ class _TimerAppState extends State<TimerApp> {
               ),
               Center(
                 child: Text('$digitHours:$digitMinutes:$digitSeconds', 
-                 style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.w900, 
-                  fontSize: 72.0,
-                  ),
+                style: Theme.of(context)
+                  .textTheme
+                  .headline2!
+                  .copyWith(fontWeight: FontWeight.w900),
                 ),
               ),
               Container(
