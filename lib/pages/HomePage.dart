@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_timer/components/AppBarMy.dart';
+import 'package:flutter_timer/components/ContainerPd.dart';
 import 'package:flutter_timer/components/NavBar.dart';
 
 class HomePage extends StatefulWidget {
@@ -18,9 +19,14 @@ class _HomePageState extends State<HomePage> {
           backgroundColor: Colors.green,
           title: 'Home',
         ),
-        body: Container(
-          child: Text("HomePage"),
-        ),
+        body: ContainerPd(
+          widget: Container(
+            child: Text("HomePage"),
+          ),
+          ),
+        // body: Container(
+        //   child: Text("HomePage"),
+        // ),
     );
   }
 }

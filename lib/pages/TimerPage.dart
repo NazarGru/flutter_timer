@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_timer/components/AppBarMy.dart';
+import 'package:flutter_timer/components/ContainerPd.dart';
 import 'package:flutter_timer/components/TimerApp.dart';
 import 'package:flutter_timer/components/NavBar.dart';
 
@@ -19,7 +20,12 @@ class _TimerPageState extends State<TimerPage> {
           backgroundColor: Colors.red,
           title: 'Timer',
         ),
-        body: TimerApp(),
+        body: ContainerPd(
+          widget: Container(
+            child: TimerApp(),
+            ),
+            backgroundColor: Colors.red, 
+          ),
     );
   }
 }

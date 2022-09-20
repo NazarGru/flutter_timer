@@ -75,11 +75,9 @@ class _TimerAppState extends State<TimerApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).primaryColor.withOpacity(0.10),
+      backgroundColor: Colors.red,
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
+            child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -181,7 +179,6 @@ class _TimerAppState extends State<TimerApp> {
                 ],
               )
             ],
-          ),
         ), 
         ),
     );
